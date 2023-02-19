@@ -20,7 +20,7 @@ export abstract class DioAccount {
 
   deposit = (depositAmount: number): void => {
     if (depositAmount <= 0)
-      throw new Error("Valor de deposito invalido!")
+      throw new Error('Valor de deposito invalido')
 
     if (this.validateStatus()) {
       this.balance += depositAmount
@@ -30,7 +30,7 @@ export abstract class DioAccount {
 
   withdraw = (withdrawAmount: number): void => {
     if (withdrawAmount <= 0)
-      throw new Error("Valor de retirada invalido!")
+      throw new Error('Valor de retirada invalido')
 
     if (this.validateStatus()) {
       this.balance -= withdrawAmount
@@ -42,7 +42,7 @@ export abstract class DioAccount {
     console.log(this.balance)
   }
 
-  private validateStatus = (): boolean => {
+  protected validateStatus = (): boolean => {
     if (this.status) {
       return this.status
     }

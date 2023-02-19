@@ -1,4 +1,4 @@
-import { DioAccount } from "./DioAccount"
+import { DioAccount } from "./DioAccount";
 
 export class CompanyAccount extends DioAccount {
 
@@ -6,7 +6,14 @@ export class CompanyAccount extends DioAccount {
     super(name, accountNumber)
   }
 
-  getLoan = (): void => {
+  getLoan = (loanAmount: number): void => {
+    if (loanAmount <= 0)
+      throw new Error('Valor de emprestimo invalido')
+
+    if (!this.validateStatus())
+      throw new Error("Conta invalida")
+
+    this.deposit(loanAmount);
     console.log('Voce pegou um empréstimo')
   }
 }
