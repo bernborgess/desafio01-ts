@@ -27,7 +27,7 @@ desenvolvido por [Nathally Souza](https://github.com/nathyts)
   - Os valores do saldos deve ser acrescidos, de acordo com o valor informado para empréstimo
   - Apenas contas com o status true podem fazer empréstimo
 
-[ ] Criar um novo tipo de conta a partir da DioAccount
+[X] Criar um novo tipo de conta a partir da DioAccount
   - Esta conta não deve receber novos atributos
   - Esta conta terá um método de depósito, que acresce 10 a mais ao valor informado para depósito. (Ex: Um depósito de 100, será de 110 no final)
 
