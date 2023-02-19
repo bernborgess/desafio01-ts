@@ -17,7 +17,7 @@ export abstract class DioAccount {
     return this.accountNumber
   }
 
-  deposit = (depositAmount: number): void => {
+  deposit(depositAmount: number): void {
     if (depositAmount <= 0)
       throw new Error('Valor de deposito invalido')
 

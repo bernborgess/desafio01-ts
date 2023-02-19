@@ -7,8 +7,8 @@ export class RiggedAccount extends DioAccount {
     super(name, accountNumber)
   }
 
-  deposit = (depositAmount: number): void => {
-    super.deposit(depositAmount + 10);
+  deposit(depositAmount: number): void {
+    super.deposit(depositAmount + 10)
   }
 
 }
